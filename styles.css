@@ -13,12 +13,27 @@ header {
     padding: 20px 0;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 h1, h2 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-.resumo, .video-principal, .video-secundarios, .cuidado-palavras, .historico-racismo, .povo-preto, .livros, .social-media {
+.resumo, .video-principal, .musicas, .criatividade, .historico-racismo, .depoimentos, .social-media {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -26,7 +41,7 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.video-principal iframe, .video-secundarios iframe {
+.video-principal iframe {
     width: 100%;
     max-width: 600px;
     height: 315px;
@@ -34,42 +49,21 @@ h1, h2 {
     border-radius: 10px;
 }
 
-.video-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.cuidado-palavras ul {
+.musicas ul {
     list-style-type: none;
     padding: 0;
 }
 
-.cuidado-palavras li {
+.musicas li {
     margin: 10px 0;
-    display: flex;
-    align-items: center;
 }
 
-.historico-racismo article {
-    margin-bottom: 15px;
+.galeria, .poesias {
+    margin: 10px 0;
 }
 
-.livros {
-    display: flex;
-    justify-content: space-around;
-}
-
-.livro {
-    max-width: 220px;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.livro img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
+.depoimentos .testemunhos {
+    margin: 10px 0;
 }
 
 .social-media {
