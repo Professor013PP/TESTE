@@ -33,7 +33,7 @@ h1, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.videos, .termos, .livros, .musicas, .jogos, .social-media {
+.videos, .termos, .livros, .musicas, .jogos, .social-media, .importancia, .fotos {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -77,6 +77,24 @@ h1, h2 {
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
+}
+
+.importancia {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.fotos .image-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fotos img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .social-media {
