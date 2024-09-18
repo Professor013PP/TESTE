@@ -1,67 +1,74 @@
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+/* Reset básico para garantir que a aparência seja consistente em diferentes navegadores */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos básicos para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para o cabeçalho */
 header {
-    background-color: yellow;
-    color: black;
-    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
 }
 
-main {
-    padding: 20px;
+/* Estilo para seções */
+section {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 1200px;
 }
 
-h2 {
-    color: yellow;
+/* Estilo para vídeos */
+.video iframe {
+    display: block;
+    margin: 0 auto;
 }
 
-.video-container {
+/* Estilo para a lista de livros */
+.books {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1rem;
     justify-content: center;
 }
 
-.video {
-    text-align: center;
-    margin-bottom: 20px;
-    flex: 1 1 45%;
-    max-width: 500px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.book-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.book-list li {
-    flex: 1 1 45%;
-    max-width: 200px;
+/* Estilo para cada item de livro */
+.book {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.book-list img {
-    width: 100%;
+.book img {
+    max-width: 100%;
     height: auto;
-    border: 2px solid yellow;
+    border-radius: 4px;
 }
 
+.book p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Estilo para o rodapé */
 footer {
-    background-color: yellow;
-    color: black;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
-    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
