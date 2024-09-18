@@ -17,7 +17,7 @@ h1, h2 {
     margin: 0;
 }
 
-.resumo, .video-principal, .video-secundarios, .cuidado-palavras, .povo-preto, .livros {
+.resumo, .video-principal, .video-secundarios, .cuidado-palavras, .historico-racismo, .povo-preto, .livros {
     margin: 20px;
     padding: 15px;
     border-radius: 8px;
@@ -50,6 +50,22 @@ h1, h2 {
 .cuidado-palavras ul {
     list-style-type: none;
     padding: 0;
+}
+
+.historico-racismo {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historico-racismo article {
+    margin-bottom: 15px;
+}
+
+.historico-racismo h3 {
+    margin-top: 15px;
 }
 
 .livros {
