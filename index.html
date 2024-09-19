@@ -3,122 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Educação Antirracista</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .quiz, .memory-game, .word-search {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 10px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Numa sociedade racista, não basta não ser racista. É necessário ser antirracista</h1>
-        <nav>
-            <ul>
-                <li><a href="#videos">Vídeos</a></li>
-                <li><a href="#termos">Termos Racistas</a></li>
-                <li><a href="#livros">Livros Recomendados</a></li>
-                <li><a href="#musicas">Músicas sobre a Causa</a></li>
-                <li><a href="#jogos">Aprendizado Lúdico</a></li>
-                <li><a href="#social-media">Conecte-se</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section id="videos" class="videos">
-        <h2>Vídeos Educativos</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/MzkIppyYkP0" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/SwN4ndBFaPg" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/Ia3NrSoTSXk" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/E_BjYPOE3ag" frameborder="0" allowfullscreen></iframe>
+    <section id="quiz" class="quiz">
+        <h2>Quiz sobre Racismo</h2>
+        <form id="quiz-form">
+            <label>1. O que é racismo?</label><br>
+            <input type="radio" name="q1" value="a"> A) Preconceito contra pessoas de diferentes etnias<br>
+            <input type="radio" name="q1" value="b"> B) Aceitação de todas as culturas<br>
+            <input type="radio" name="q1" value="c"> C) Não existe preconceito<br><br>
+
+            <label>2. O que significa antirracismo?</label><br>
+            <input type="radio" name="q2" value="a"> A) Ser indiferente ao racismo<br>
+            <input type="radio" name="q2" value="b"> B) Combater o racismo<br>
+            <input type="radio" name="q2" value="c"> C) Apoiar racistas<br><br>
+
+            <button type="button" onclick="checkAnswers()">Enviar</button>
+        </form>
+        <div id="quiz-results"></div>
+    </section>
+
+    <section id="memory-game" class="memory-game">
+        <h2>Jogo da Memória Antirracista</h2>
+        <div class="grid">
+            <div class="card" onclick="flipCard(this)">🟩</div>
+            <div class="card" onclick="flipCard(this)">🟩</div>
+            <div class="card" onclick="flipCard(this)">🟦</div>
+            <div class="card" onclick="flipCard(this)">🟦</div>
+            <div class="card" onclick="flipCard(this)">🟥</div>
+            <div class="card" onclick="flipCard(this)">🟥</div>
         </div>
     </section>
 
-    <section id="termos" class="termos">
-        <h2>Termos Racistas e suas Alternativas</h2>
-        <ul>
-            <li><strong>Negros</strong> → Afrodescendentes</li>
-            <li><strong>Mulatos</strong> → Mestiços</li>
-            <li><strong>Pretos</strong> → Pessoas negras</li>
-            <li><strong>Escravos</strong> → Pessoas escravizadas</li>
-            <li><strong>Raça inferior</strong> → Raça humana</li>
-            <li><strong>Branquitude</strong> → Privilegiado</li>
-            <li><strong>Cor da pele</strong> → Identidade racial</li>
-            <li><strong>Estereótipos</strong> → Generalizações</li>
-            <li><strong>Segregação</strong> → Inclusão</li>
-            <li><strong>Racismo cultural</strong> → Diversidade cultural</li>
-        </ul>
-    </section>
-
-    <section id="livros" class="livros">
-        <h2>Livros Recomendados</h2>
-        <ul>
-            <li><strong>Pequeno Manual Antirracista</strong> - Djamila Ribeiro</li>
-            <li><strong>O que é Racismo</strong> - Silvio Almeida</li>
-            <li><strong>O Negro no Brasil</strong> - Alberto da Costa e Silva</li>
-            <li><strong>As Veias Abertas da América Latina</strong> - Eduardo Galeano</li>
-            <li><strong>O que é Racismo Institucional</strong> - Marilena Chauí</li>
-            <li><strong>Quem tem medo do feminismo negro?</strong> - Djamila Ribeiro</li>
-            <li><strong>Política e Racismo</strong> - João Costa Vargas</li>
-            <li><strong>Na Minha Pele</strong> - Lázaro Ramos</li>
-            <li><strong>História da África</strong> - José Carlos de Almeida</li>
-        </ul>
-    </section>
-
-    <section id="musicas" class="musicas">
-        <h2>Músicas sobre a Causa</h2>
-        <ul>
-            <li><strong>Racionais MC's</strong> - "Da Ponte pra Cá"</li>
-            <li><strong>Karol Conka</strong> - "Tombei"</li>
-            <li><strong>Emicida</strong> - "A Gente Fala"</li>
-            <li><strong>MV Bill</strong> - "Soldado do Morro"</li>
-            <li><strong>Filipe Ret</strong> - "Poesia Acústica 2"</li>
-            <li><strong>Black Alien</strong> - "O Mundo é o Meu Lugar"</li>
-            <li><strong>Djonga</strong> - "Olho de Tigre"</li>
-            <li><strong>Flora Matos</strong> - "Ela é do Tipo"</li>
-            <li><strong>Projota</strong> - "Numa Nuvem"</li>
-            <li><strong>Fresno</strong> - "O que eu não sei"</li>
-        </ul>
-    </section>
-
-    <section id="jogos" class="jogos">
-        <h2>Aprendizado Lúdico</h2>
-        <p>Explore jogos e quizzes interativos que ensinam sobre racismo e diversidade.</p>
-        <div class="game-links">
-            <a href="https://www.education.com/game/learning/antiracism-quiz/" class="game-link" target="_blank">Quiz sobre Racismo</a>
-            <a href="https://www.unicef.org/education/anti-racism-education" class="game-link" target="_blank">Jogo da Memória Antirracista</a>
-            <a href="https://kahoot.com/" class="game-link" target="_blank">Quiz de Conhecimentos sobre Racismo</a>
-            <a href="https://www.memozor.com/memory-game-maker" class="game-link" target="_blank">Jogo da Memória</a>
-            <a href="https://wordwall.net/" class="game-link" target="_blank">Atividade de Montagem de Frases</a>
-            <a href="https://socrative.com/" class="game-link" target="_blank">Jogo de Adivinhação de Personalidades</a>
-            <a href="https://aggie.io/" class="game-link" target="_blank">Desenho Colaborativo</a>
-            <a href="https://puzzlemaker.discoveryeducation.com/" class="game-link" target="_blank">Caça-Palavras Antirracista</a>
-            <a href="https://store.steampowered.com/app/286160/Tabletop_Simulator/" class="game-link" target="_blank">Jogo de Role-Playing (RPG)</a>
-            <a href="https://www.debate.org/" class="game-link" target="_blank">Simulações de Debates</a>
-        </div>
-    </section>
-
-    <section class="importancia">
-        <h2>A Importância do Antirracismo</h2>
-        <p>O antirracismo é uma luta essencial para a construção de uma sociedade justa e igualitária. Ele nos ensina a reconhecer e combater as desigualdades raciais que permeiam nossas instituições e relações sociais. A educação antirracista promove a empatia, a inclusão e a valorização da diversidade, fundamentais para o desenvolvimento de uma comunidade coesa e solidária.</p>
-    </section>
-
-    <section id="fotos" class="fotos">
-        <h2>Imagens Inspiradoras</h2>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/300x200.png?text=Arte+Urbana" alt="Arte Urbana">
-            <img src="https://via.placeholder.com/300x200.png?text=Diversidade" alt="Diversidade">
-            <img src="https://via.placeholder.com/300x200.png?text=Luta+Antirracista" alt="Luta Antirracista">
-        </div>
-    </section>
-
-    <section id="social-media" class="social-media">
-        <h2>Conecte-se com a gente!</h2>
-        <p>Siga-nos nas redes sociais:</p>
-        <div>
-            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
-        </div>
+    <section id="word-search" class="word-search">
+        <h2>Caça-Palavras Antirracista</h2>
+        <p>Encontre as palavras: DIVERSIDADE, IGUALDADE, RESPEITO</p>
+        <pre>
+        D I V E R S I D A D E
+        A B C R E S P E I T O
+        F G H I J K L M N O P
+        Q R S T U V I G U A L
+        W X Y Z A B C D E F G
+        </pre>
     </section>
 
     <footer>
@@ -126,5 +93,55 @@
         <p>A educação antirracista é uma necessidade urgente. Promover essa educação é fundamental para a transformação social.</p>
         <p>© 2024 Site criado pelos alunos da 2 série A da E.E Pedro Paulo Gonçalves Lopes Professor.</p>
     </footer>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'b'
+            };
+            let score = 0;
+            
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+            
+            document.getElementById('quiz-results').innerText = `Você acertou ${score} de 2 perguntas.`;
+        }
+
+        let hasFlippedCard = false;
+        let firstCard, secondCard;
+
+        function flipCard(card) {
+            if (!hasFlippedCard) {
+                hasFlippedCard = true;
+                firstCard = card;
+                firstCard.innerText = "🙌";
+            } else {
+                secondCard = card;
+                secondCard.innerText = "🙌";
+                checkForMatch();
+            }
+        }
+
+        function checkForMatch() {
+            if (firstCard.innerText === secondCard.innerText) {
+                resetCards();
+            } else {
+                setTimeout(() => {
+                    firstCard.innerText = "🟩";
+                    secondCard.innerText = "🟩";
+                    resetCards();
+                }, 1000);
+            }
+        }
+
+        function resetCards() {
+            [hasFlippedCard, firstCard, secondCard] = [false, null, null];
+        }
+    </script>
 </body>
 </html>
