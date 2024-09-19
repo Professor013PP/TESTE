@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <title>Educação Antirracista</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
+            background-color: #f0f8ff;
             color: #333;
         }
-        .quiz, .memory-game, .word-search {
+        header {
+            text-align: center;
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
             margin: 20px 0;
             padding: 20px;
             border-radius: 10px;
             background: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .quiz, .memory-game, .word-search {
+            margin: 20px 0;
         }
         .grid {
             display: grid;
@@ -31,61 +53,144 @@
         .card {
             width: 100px;
             height: 100px;
-            background-color: #ccc;
+            background-color: #d9edf7;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             font-size: 2em;
         }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Numa sociedade racista, não basta não ser racista. É necessário ser antirracista</h1>
+        <h1>Educação Antirracista</h1>
+        <nav>
+            <ul>
+                <li><a href="#videos">Vídeos</a></li>
+                <li><a href="#termos">Termos Racistas</a></li>
+                <li><a href="#livros">Livros Recomendados</a></li>
+                <li><a href="#musicas">Músicas sobre a Causa</a></li>
+                <li><a href="#jogos">Aprendizado Lúdico</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="quiz" class="quiz">
-        <h2>Quiz sobre Racismo</h2>
-        <form id="quiz-form">
-            <label>1. O que é racismo?</label><br>
-            <input type="radio" name="q1" value="a"> A) Preconceito contra pessoas de diferentes etnias<br>
-            <input type="radio" name="q1" value="b"> B) Aceitação de todas as culturas<br>
-            <input type="radio" name="q1" value="c"> C) Não existe preconceito<br><br>
-
-            <label>2. O que significa antirracismo?</label><br>
-            <input type="radio" name="q2" value="a"> A) Ser indiferente ao racismo<br>
-            <input type="radio" name="q2" value="b"> B) Combater o racismo<br>
-            <input type="radio" name="q2" value="c"> C) Apoiar racistas<br><br>
-
-            <button type="button" onclick="checkAnswers()">Enviar</button>
-        </form>
-        <div id="quiz-results"></div>
-    </section>
-
-    <section id="memory-game" class="memory-game">
-        <h2>Jogo da Memória Antirracista</h2>
-        <div class="grid">
-            <div class="card" onclick="flipCard(this)">🟩</div>
-            <div class="card" onclick="flipCard(this)">🟩</div>
-            <div class="card" onclick="flipCard(this)">🟦</div>
-            <div class="card" onclick="flipCard(this)">🟦</div>
-            <div class="card" onclick="flipCard(this)">🟥</div>
-            <div class="card" onclick="flipCard(this)">🟥</div>
+    <section id="videos">
+        <h2>Vídeos Educativos</h2>
+        <div class="video-container">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/MzkIppyYkP0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/SwN4ndBFaPg" frameborder="0" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/Ia3NrSoTSXk" frameborder="0" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/E_BjYPOE3ag" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
-    <section id="word-search" class="word-search">
-        <h2>Caça-Palavras Antirracista</h2>
-        <p>Encontre as palavras: DIVERSIDADE, IGUALDADE, RESPEITO</p>
-        <pre>
-        D I V E R S I D A D E
-        A B C R E S P E I T O
-        F G H I J K L M N O P
-        Q R S T U V I G U A L
-        W X Y Z A B C D E F G
-        </pre>
+    <section id="termos">
+        <h2>Termos Racistas e suas Alternativas</h2>
+        <ul>
+            <li><strong>Negros</strong> → Afrodescendentes</li>
+            <li><strong>Mulatos</strong> → Mestiços</li>
+            <li><strong>Pretos</strong> → Pessoas negras</li>
+            <li><strong>Escravos</strong> → Pessoas escravizadas</li>
+            <li><strong>Raça inferior</strong> → Raça humana</li>
+            <li><strong>Branquitude</strong> → Privilegiado</li>
+            <li><strong>Cor da pele</strong> → Identidade racial</li>
+            <li><strong>Estereótipos</strong> → Generalizações</li>
+            <li><strong>Segregação</strong> → Inclusão</li>
+            <li><strong>Racismo cultural</strong> → Diversidade cultural</li>
+        </ul>
+    </section>
+
+    <section id="livros">
+        <h2>Livros Recomendados</h2>
+        <ul>
+            <li><strong>Pequeno Manual Antirracista</strong> - Djamila Ribeiro</li>
+            <li><strong>O que é Racismo</strong> - Silvio Almeida</li>
+            <li><strong>O Negro no Brasil</strong> - Alberto da Costa e Silva</li>
+            <li><strong>As Veias Abertas da América Latina</strong> - Eduardo Galeano</li>
+            <li><strong>O que é Racismo Institucional</strong> - Marilena Chauí</li>
+            <li><strong>Quem tem medo do feminismo negro?</strong> - Djamila Ribeiro</li>
+            <li><strong>Política e Racismo</strong> - João Costa Vargas</li>
+            <li><strong>Na Minha Pele</strong> - Lázaro Ramos</li>
+            <li><strong>História da África</strong> - José Carlos de Almeida</li>
+        </ul>
+    </section>
+
+    <section id="musicas">
+        <h2>Músicas sobre a Causa</h2>
+        <ul>
+            <li><strong>Racionais MC's</strong> - "Da Ponte pra Cá"</li>
+            <li><strong>Karol Conka</strong> - "Tombei"</li>
+            <li><strong>Emicida</strong> - "A Gente Fala"</li>
+            <li><strong>MV Bill</strong> - "Soldado do Morro"</li>
+            <li><strong>Filipe Ret</strong> - "Poesia Acústica 2"</li>
+            <li><strong>Black Alien</strong> - "O Mundo é o Meu Lugar"</li>
+            <li><strong>Djonga</strong> - "Olho de Tigre"</li>
+            <li><strong>Flora Matos</strong> - "Ela é do Tipo"</li>
+            <li><strong>Projota</strong> - "Numa Nuvem"</li>
+        </ul>
+    </section>
+
+    <section id="jogos">
+        <h2>Aprendizado Lúdico</h2>
+        <p>Explore jogos e quizzes interativos que ensinam sobre racismo e diversidade.</p>
+        
+        <div class="quiz">
+            <h3>Quiz sobre Racismo</h3>
+            <form id="quiz-form">
+                <label>1. O que é racismo?</label><br>
+                <input type="radio" name="q1" value="a"> A) Preconceito contra pessoas de diferentes etnias<br>
+                <input type="radio" name="q1" value="b"> B) Aceitação de todas as culturas<br>
+                <input type="radio" name="q1" value="c"> C) Não existe preconceito<br><br>
+
+                <label>2. O que significa antirracismo?</label><br>
+                <input type="radio" name="q2" value="a"> A) Ser indiferente ao racismo<br>
+                <input type="radio" name="q2" value="b"> B) Combater o racismo<br>
+                <input type="radio" name="q2" value="c"> C) Apoiar racistas<br><br>
+
+                <button type="button" onclick="checkAnswers()">Enviar</button>
+            </form>
+            <div id="quiz-results"></div>
+        </div>
+
+        <div class="memory-game">
+            <h3>Jogo da Memória Antirracista</h3>
+            <div class="grid">
+                <div class="card" onclick="flipCard(this)">🟩</div>
+                <div class="card" onclick="flipCard(this)">🟩</div>
+                <div class="card" onclick="flipCard(this)">🟦</div>
+                <div class="card" onclick="flipCard(this)">🟦</div>
+                <div class="card" onclick="flipCard(this)">🟥</div>
+                <div class="card" onclick="flipCard(this)">🟥</div>
+            </div>
+        </div>
+
+        <div class="word-search">
+            <h3>Caça-Palavras Antirracista</h3>
+            <p>Encontre as palavras: DIVERSIDADE, IGUALDADE, RESPEITO</p>
+            <pre>
+            D I V E R S I D A D E
+            A B C R E S P E I T O
+            F G H I J K L M N O P
+            Q R S T U V I G U A L
+            W X Y Z A B C D E F G
+            </pre>
+        </div>
     </section>
 
     <footer>
